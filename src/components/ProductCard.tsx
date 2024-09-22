@@ -16,7 +16,7 @@ export function ProductCard({imagePath, name, priceInCents, description, id}: Pr
     return (
         <Card>
             <div className="relative w-full h-auto aspect-video flex justify-center">
-                <Image src={imagePath} height={300} width={280} alt={name}/>
+                <Image src={imagePath} fill alt={name}/>
             </div>
             <CardHeader>
                 <CardTitle>{name}</CardTitle>
