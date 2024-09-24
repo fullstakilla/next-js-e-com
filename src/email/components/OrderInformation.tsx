@@ -21,7 +21,6 @@ export function OrderInformation({
   product,
   downloadVerificationId,
 }: OrderInformationProps) {
-  console.log('Server URL:', process.env.NEXT_PUBLIC_SERVER_URL);
   return (
     <>
       <Section>
