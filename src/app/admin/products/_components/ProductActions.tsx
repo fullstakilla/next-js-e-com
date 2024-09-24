@@ -1,7 +1,7 @@
 'use client'
 
 import { useTransition } from "react";
-import { deleteProduct, toggleProductAvailability } from "../../_actions/product";
+import { deleteProduct, toggleProductAvailability } from "../../_actions/products";
 import { DropdownMenuItem } from "@/components/ui/dropdown-menu";
 import { useRouter } from "next/navigation";
 
