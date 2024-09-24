@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# E-commerce store
 
-## Getting Started
+###
+**About:** 
+Full Stack E-commerce Store With Admin Dashboard - Next.js, Prisma, Stripe, Tailwind (Shadcn)
 
-First, run the development server:
+**E-commerce Store available at the link:** soon
+
+![image](https://github.com/user-attachments/assets/b7d7dc3d-dcce-4b90-a81b-3437069ec4d4)
+
+---
+
+## Main features
+
+### User
+* You can buy the course (implemented with Stripe)
+* You receive the receipt on your email
+* You can instantly download course
+* You can check all your buys by entering your email - you will receive all receipts in one message
+
+### Admin
+* Admin can view sales amount, orders amount, customers amount, average value spent, active and inactive products
+* Admin can view all products: download, edit, activate/deactivate and delete them
+* Admin can view all customers and delete them
+* Admin can view all exact sales and delete them
+
+---
+
+### To view it locally
+
+Make sure to install the dependencies:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# npm 
+npm i
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Start the development server on `http://localhost:3000`:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# npm
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Receive Stripe events:
 
-## Learn More
+```bash
+stripe listen --forward-to localhost:3000/webhooks/stripe
+```
 
-To learn more about Next.js, take a look at the following resources:
+Make your .env file with valid keys:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+DATABASE_URL="file:./dev.db"
+ADMIN_USERNAME=
+ADMIN_HASHED_PASSWORD=
+STRIPE_SECRET_KEY=
+STRIPE_WEBHOOK_SECRET=
+RESEND_API_KEY=
+SENDER_EMAIL=
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+NEXT_PUBLIC_STRIPE_PUBLIC_KEY=
+NEXT_PUBLIC_SERVER_URL="http://localhost:3000"
+```
