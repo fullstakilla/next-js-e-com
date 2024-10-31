@@ -4,8 +4,6 @@
 **About:** 
 Full Stack E-commerce Store With Admin Dashboard - Next.js, Prisma, Stripe, Tailwind (Shadcn)
 
-**E-commerce Store available at the link:** soon
-
 ![image](https://github.com/user-attachments/assets/b7d7dc3d-dcce-4b90-a81b-3437069ec4d4)
 
 ---
